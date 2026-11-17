@@ -269,7 +269,7 @@ int main(){
         while(i < processCount && arr[i].arrival_time <= timeCounter){
             if(arr[i].burst_time == 0){
                 arr[i].isCompleted = 1;
-                arr[i].start_time = arr[i].end_time = timeCounter;
+                arr[i].start_time = arr[i].end_time = arr[i].arrival_time;
                 runningProcessCount--;
             }
             else{
